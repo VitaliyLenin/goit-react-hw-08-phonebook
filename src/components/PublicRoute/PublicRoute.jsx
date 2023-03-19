@@ -8,7 +8,7 @@ const PublicRoute = () => {
   const isToken = useSelector(getToken);
 
   if (!isUserLogin && isToken) {
-    return 'Loading...';
+    return <p>Loading...</p>;
   }
   if (isUserLogin) {
     return <Navigate to="/contacts" />;

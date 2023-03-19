@@ -1,6 +1,3 @@
-// import { useState } from 'react';
-// import { Link } from 'react-router-dom';
-
 import UseForm from 'shared/hooks/useForm';
 import initialState from './initialState';
 import FormField from 'shared/API/components/formField';

@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// import PrivateRoute from './PrivateRoutes/PrivateRoute';
+import PrivateRoute from './PrivateRoutes/PrivateRoute';
 import PublicRoute from './PublicRoute/PublicRoute';
 
 const HomePage = lazy(() => import('pages/homePage/homePage'));
@@ -21,9 +21,9 @@ const UserRoutes = () => {
           <Route path="login" element={<LoginPage />} />
         </Route>
 
-        {/* <Route element={<PrivateRoute />}> */}
-        <Route path="/contacts" element={<MyContacts />} />
-        {/* </Route> */}
+        <Route element={<PrivateRoute />}>
+          <Route path="/contacts" element={<MyContacts />} />
+        </Route>
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -14,7 +14,7 @@ import { store, persistor } from './Redux/Store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <PersistGate loding={<p>...Loding</p>} persistor={persistor}>
+    <PersistGate loading={null} persistor={persistor}>
       <React.StrictMode>
         <BrowserRouter basename="/goit-react-hw-08-phonebook">
           <App />

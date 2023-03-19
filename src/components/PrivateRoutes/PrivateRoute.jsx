@@ -8,7 +8,7 @@ const PrivateRoute = () => {
   const isToken = useSelector(getToken);
 
   if (!isUserLogin && isToken) {
-    return 'Loading...';
+    return <p>Loading...</p>;
   }
   if (!isUserLogin && !isToken) {
     return <Navigate to="/login" />;
