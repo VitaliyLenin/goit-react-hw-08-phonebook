@@ -1,22 +1,15 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-
 import { current } from 'Redux/auth/auth-operations';
 
-import Navbar from './NavBar/Navbar';
-import UserRoutes from './userRoutes';
-
-export const App = () => {
+const AuthLayout = ({ children }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(current());
   }, [dispatch]);
 
-  return (
-    <div>
-      <Navbar />
-      <UserRoutes />
-    </div>
-  );
+  return <>{children}</>;
 };
+
+export default AuthLayout;

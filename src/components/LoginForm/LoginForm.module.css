@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loginpage_title {
+  color: gray;
+  font-weight: bold;
+}
