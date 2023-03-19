@@ -50,13 +50,15 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(current.fulfilled, (state, { payload }) => {
-        const user = payload;
+        const { user, token } = payload;
         state.loading = false;
         state.user = user;
+        state.token = token;
         state.isLogin = true;
       })
       .addCase(current.rejected, (state, { payload }) => {
         state.loading = false;
+        state.token = '';
         state.error = payload;
       })
       .addCase(logout.pending, state => {
@@ -76,5 +78,5 @@ const authSlice = createSlice({
   },
 });
 
-// export default authSlice.reducer;
-export const authReduser = authSlice.reducer;
+export default authSlice.reducer;
+// export const authReduser = authSlice.reducer;

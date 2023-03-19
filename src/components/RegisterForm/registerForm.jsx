@@ -27,7 +27,7 @@ const RegisterForm = ({ onSubmit }) => {
           handleChange={handleChange}
           {...fields.email}
         />
-        <div className={css.iconInput_wrap}>
+        <div>
           <FormField
             value={password}
             handleChange={handleChange}
@@ -35,7 +35,7 @@ const RegisterForm = ({ onSubmit }) => {
           />
         </div>
 
-        <Button> Create account </Button>
+        <Button> Register </Button>
       </form>
     </div>
   );
