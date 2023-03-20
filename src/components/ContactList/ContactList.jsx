@@ -2,8 +2,17 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 
 import { getFilteredContacts } from 'Redux/Contacts/contacts-selectors';
-import { deleteContact } from 'Redux/Contacts/contacts-operations';
-import { fetchContacts } from 'Redux/Contacts/contacts-operations';
+// import { deleteContact } from 'Redux/Contacts/contacts-operations';
+// import { fetchContacts } from 'Redux/Contacts/contacts-operations';
+// import {
+//   fetchContacts,
+//   deleteContact,
+// } from 'Redux/Contacts/contacts-operations';
+
+import {
+  fetchAllContacts,
+  fetchDeleteContact,
+} from 'Redux/Contacts/contacts-operations';
 
 import css from './ContactList.module.css';
 
@@ -16,21 +25,21 @@ const MyContactList = () => {
 
   useEffect(() => {
     setLoading(false);
-    dispatch(fetchContacts());
+    dispatch(fetchAllContacts());
 
     setLoadingContacts(false);
   }, [dispatch]);
 
   const handleRemoveContact = async contactId => {
     setLoading({ [contactId]: true });
-    await dispatch(deleteContact(contactId));
+    await dispatch(fetchDeleteContact(contactId));
     setLoading({ [contactId]: false });
   };
 
   return (
     <>
       {loadingContacts ? (
-        'Loading...'
+        <p>Loading..</p>
       ) : (
         <ul className={css.contactList}>
           {contacts.map(({ id, name, number }) => (
