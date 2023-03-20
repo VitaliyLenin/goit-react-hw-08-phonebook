@@ -3,16 +3,6 @@ import { useState, useCallback } from 'react';
 const UseForm = ({ initialState, onSubmit }) => {
   const [state, setState] = useState({ ...initialState });
 
-  // const handleChange = useCallback(
-  //   e => {
-  //     const { name, value } = e.target;
-  //     setState(prevState => {
-  //       return { ...prevState, [name]: value };
-  //     });
-  //   },
-  //   [setState]
-  // );
-
   const handleChange = useCallback(
     ({ target }) => {
       const { name, value } = target;
