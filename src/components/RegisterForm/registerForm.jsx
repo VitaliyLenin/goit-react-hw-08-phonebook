@@ -16,7 +16,10 @@ const RegisterForm = ({ onSubmit }) => {
 
   return (
     <div className={css.homepage_wrap}>
-      <h2 className={css.homepage_title}>Create account</h2>
+      <div className={css.title_wrap}>
+        <h2 className={css.homepage_title}>Create account</h2>
+      </div>
+
       <form onSubmit={handleSubmit} className={css.form}>
         <FormField value={name} handleChange={handleChange} {...fields.name} />
         <FormField
@@ -31,8 +34,9 @@ const RegisterForm = ({ onSubmit }) => {
             {...fields.password}
           />
         </div>
-
-        <Button> Register </Button>
+        <div className={css.button_wrap}>
+          <Button> Register </Button>
+        </div>
       </form>
     </div>
   );

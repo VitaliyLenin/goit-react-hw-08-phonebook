@@ -27,25 +27,6 @@ const MyContactList = () => {
     setLoading({ [contactId]: false });
   };
 
-  // const names = contacts.map(({ id, name, phone }) => (
-  //   <li key={id}>
-  //     {name} : {phone}
-  //     <button
-  //       className={css.button}
-  //       onClick={() => handleRemoveContact(id)}
-  //       type="button"
-  //     >
-  //       Delete
-  //     </button>
-  //   </li>
-  // ));
-
-  // return (
-  //   <div className={css.contacts_wrapper}>
-  //     <ul className={css.contact_items}>{names}</ul>
-  //   </div>
-  // );
-
   return (
     <>
       {loadingContacts ? (

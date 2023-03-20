@@ -6,7 +6,7 @@ const NavbarAuth = () => {
   return (
     <div className={css.navbarAuth}>
       <NavLink to="/register" className={css.link}>
-        register
+        Register
       </NavLink>
       |
       <NavLink to="/login" className={css.link}>

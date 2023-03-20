@@ -2,9 +2,21 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: flex-end;
+}
+
+.title_wrap {
+  display: grid;
+  justify-content: center;
 }
 
 .homepage_title {
   color: gray;
   font-weight: bold;
+}
+
+.button_wrap {
+  display: grid;
+  justify-content: center;
+  margin-top: 20px;
 }

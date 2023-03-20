@@ -17,9 +17,9 @@ const NavbarUser = () => {
   const { name } = useSelector(getUser);
   return (
     <div className={css.wrapper}>
-      <p className={css.title}>Welcome, {name} </p>
-      <Link className={css.link} onClick={onLogout}>
-        Log out
+      <p className={css.title}>Welcome, {name} | </p>
+      <Link className={css.logout_link} onClick={onLogout}>
+        Logout
       </Link>
     </div>
   );

@@ -7,15 +7,16 @@
 
 .title {
   color: gray;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 50px;
 }
 
 .register_link {
-  font-size: 40px;
-  color: black;
+  font-size: 50px;
+  color: gray;
   font-weight: bold;
   display: inline-flex;
-  /* text-decoration: none; */
+  text-decoration: none;
   justify-content: center;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.46);
 }

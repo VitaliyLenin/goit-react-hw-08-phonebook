@@ -11,12 +11,15 @@
 }
 
 .input {
-  width: 200px;
-  height: 20px;
-  border-radius: 5px;
+  width: 250px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid gray;
 }
 
 .button {
-  background-color: rgba(26, 124, 13, 0.822);
-  color: aliceblue;
+  background-color: rgb(143, 224, 143);
+  width: 200px;
+  height: 30px;
+  border-radius: 7px;
 }

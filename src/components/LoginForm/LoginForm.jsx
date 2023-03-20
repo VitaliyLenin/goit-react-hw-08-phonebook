@@ -14,20 +14,28 @@ const LoginForm = ({ onSubmit }) => {
   const { email, password } = state;
 
   return (
-    <form onSubmit={handleSubmit} className={css.form}>
-      <div className={css.loginpage_title}>
-        <h2>Enter your account</h2>
+    <div>
+      <div className={css.loginpage_wrap}>
+        <h2 className={css.loginpage_title}>Enter your account</h2>
       </div>
-      <FormField value={email} handleChange={handleChange} {...fields.email} />
-      <div className={css.iconInput_wrap}>
+      <form onSubmit={handleSubmit} className={css.form}>
         <FormField
-          value={password}
+          value={email}
           handleChange={handleChange}
-          {...fields.password}
+          {...fields.email}
         />
-      </div>
-      <Button> Sign in </Button>
-    </form>
+        <div className={css.iconInput_wrap}>
+          <FormField
+            value={password}
+            handleChange={handleChange}
+            {...fields.password}
+          />
+        </div>
+        <div className={css.button_wrap}>
+          <Button> Sign in </Button>
+        </div>
+      </form>
+    </div>
   );
 };
 

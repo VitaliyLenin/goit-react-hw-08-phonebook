@@ -9,8 +9,25 @@
   gap: 5px;
 }
 
+.contactList {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .button {
-  margin-left: 8px;
-  background-color: rgba(247, 13, 13, 0.705);
-  color: rgb(255, 240, 240);
+  background-color: rgb(250, 92, 92);
+  width: 100px;
+  height: 20px;
+  border-radius: 7px;
+}
+
+.contactList__item {
+  display: flex;
+  justify-content: center;
+}
+
+.contactList__name {
+  margin-right: 100px;
 }

@@ -1,4 +1,6 @@
 .title {
   display: grid;
   justify-items: center;
+  color: gray;
+  font-weight: bold;
 }
