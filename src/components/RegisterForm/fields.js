@@ -8,13 +8,14 @@ const fields = {
     placeholder: 'Enter name',
   },
   email: {
-    type: 'text',
+    type: 'email',
     name: 'email',
     required: true,
     label: 'User email',
     placeholder: 'Enter email',
   },
   password: {
+    type: 'passwrod',
     name: 'password',
     required: true,
     label: 'User password',
